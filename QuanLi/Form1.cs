@@ -18,32 +18,32 @@ namespace QuanLi
         string callPWD = Directory.GetCurrentDirectory().Replace(@"\", @"\\");
         public Form1()
         {
-            checkDic();
+            CheckDic();
             InitializeComponent();
         }
         #region checkToStart
-        private void checkDic()
+        private void CheckDic()
         {
-            checkSystem();
-            creatDic("old_apk");
-            creatDic("apk_ing");
-            creatDic("apk_new");
+            CheckSystem();
+            CreatDic("old_apk");
+            CreatDic("apk_ing");
+            CreatDic("apk_new");
         }
-        private void checkSystem()
+        private void CheckSystem()
         {
-            if (!checkExit("system"))
+            if (!CheckExit("system"))
             {
                 MessageBox.Show("Chưa có thư mục \"system\"\nChương trình sẽ không chạy nếu thiếu\nApktool và testsign", "Cảnh báo", MessageBoxButtons.OK);
             }
         }
-        private void creatDic(string st)
+        private void CreatDic(string st)
         {
-            if (!checkExit(st))
+            if (!CheckExit(st))
             {
                 creat(st);
             }
         }
-        private bool checkExit(string st)
+        private bool CheckExit(string st)
         {
             return Directory.Exists(callPWD+"\\" +st);
         }
@@ -54,7 +54,7 @@ namespace QuanLi
         #endregion
 
         #region CORE
-        private void import(string st)
+        private void Import(string st)
         {
             //startInfo.Arguments = "/c java -jar " + callPWD + "\\system\\apktool.jar if " + callPWD + "\\old_apk\\" +st;
             runAPK("if ", "\\old_apk\\" + st);
@@ -134,15 +134,15 @@ namespace QuanLi
                     Text = filePahts1[i],
                     Location = new Point(10, 50 * i)
                 };
-                newButton.Click += importbtn;
+                newButton.Click += Importbtn;
                 pnWorking.Controls.Add(newButton);
             }
         }
-        void importbtn(object sender, EventArgs e)
+        void Importbtn(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            lbStt.Text = "Đang import " + filePahts1[btn.Location.Y / 50];
-            import(btn.Text);
+            lbStt.Text = "Đang Import " + filePahts1[btn.Location.Y / 50];
+            Import(btn.Text);
             lbStt.Text = "Import " + filePahts1[btn.Location.Y / 50] + " xong";
         }
 
@@ -159,11 +159,11 @@ namespace QuanLi
                     Text = filePahts1[i],
                     Location = new Point(10, 50 * i)
                 };
-                newButton.Click += decombtn;
+                newButton.Click += Decombtn;
                 pnWorking.Controls.Add(newButton);
             }
         }
-        void decombtn(object sender, EventArgs e)
+        void Decombtn(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             lbStt.Text = "Đang decom " + filePahts1[btn.Location.Y / 50];
@@ -220,11 +220,6 @@ namespace QuanLi
             sign(btn.Text);
             lbStt.Text = "Sign " + filePahts1[btn.Location.Y / 50] + " hoàn thành";
         }
-
-        private void vScrollBar_Scroll(object sender, ScrollEventArgs e)
-        {
-            panel2.VerticalScroll.Value = vScrollBar.Value;
-        }
-
+		
     }
 }
