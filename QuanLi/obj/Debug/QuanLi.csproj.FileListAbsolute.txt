@@ -1,9 +1,0 @@
-D:\DontTouch\__project\QuanLi\QuanLi\bin\Debug\QuanLi.exe.config
-D:\DontTouch\__project\QuanLi\QuanLi\bin\Debug\QuanLi.exe
-D:\DontTouch\__project\QuanLi\QuanLi\bin\Debug\QuanLi.pdb
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.csprojResolveAssemblyReference.cache
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.Form1.resources
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.Properties.Resources.resources
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.csproj.GenerateResource.Cache
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.exe
-D:\DontTouch\__project\QuanLi\QuanLi\obj\Debug\QuanLi.pdb
